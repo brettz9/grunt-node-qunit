@@ -43,12 +43,5 @@
     "node-qunit",
     "qunit",
     "test"
-  ],
-  "_id": "grunt-node-qunit@0.0.1",
-  "optionalDependencies": {},
-  "_engineSupported": true,
-  "_npmVersion": "1.1.16",
-  "_nodeVersion": "v0.6.15",
-  "_defaultsLoaded": true,
-  "_from": "grunt-node-qunit@*"
+  ]
 }
