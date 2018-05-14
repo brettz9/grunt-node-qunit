@@ -8,6 +8,7 @@
     "email": "code@nparashuram.com",
     "url": "http://nparashuram.com"
   },
+  "contributors": [],
   "repository": {
     "type": "git",
     "url": "git://github.com/axemclion/grunt-node-qunit.git"
@@ -27,7 +28,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "qunit": "https://github.com/yomexzo/node-qunit"
+    "qunit": "https://github.com/brettz9/node-qunit#secure-istanbul"
   },
   "peerDependencies": {
     "grunt": "~0.4.0"
