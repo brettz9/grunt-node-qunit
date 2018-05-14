@@ -1,8 +1,8 @@
 module.exports = function(grunt) {
-	var log = require('qunit/lib/log.js');
-	var qunit = require("qunit");
+	var log = require('node-qunit/lib/log.js');
+	var qunit = require('node-qunit');
 
-	grunt.registerMultiTask("node-qunit", "Runs node-qunit ", function() {
+	grunt.registerMultiTask('node-qunit', 'Runs node-qunit ', function() {
 		var done = this.async(),
 			started = new Date(),
 			callback = this.data.callback;
@@ -23,12 +23,12 @@ module.exports = function(grunt) {
 		if(this.data.tests) files.tests = this.data.tests;
 		qunit.run(files, function(err, result) {
 			if(!result) {
-				throw new Error("Could not get results for Qunit test. Check previous exceptions");
+				throw new Error('Could not get results for Qunit test. Check previous exceptions');
 			}
 
 			function check(res) {
 				var hasErr = (result.failed > 0) && !ignoreFailures;
-				done(typeof res === "undefined" ? (!hasErr && !err) : res);
+				done(typeof res === 'undefined' ? (!hasErr && !err) : res);
 				log.reset();
 			}
 
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 				return check;
 			};
 			var res;
-			if(typeof callback === "function") {
+			if(typeof callback === 'function') {
 				res = callback(err, result);
 			}
 			if(!waitForAsync) {
